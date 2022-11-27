@@ -80,7 +80,7 @@ static int getMaxCount(const QUEUE* q)
 {
 	if (q == NULL || q->memory_begin == NULL) return 0;
 
-	return q->memory_end - q->memory_begin;
+	return (int)(q->memory_end - q->memory_begin);
 }
 
 // 挿入されたデータ数を得る
