@@ -36,12 +36,12 @@ bool enqueue(QUEUE* q, int val)
 {
 	// ToDo: valのデータをキューに追加します
 	// 上手くいかない場合にはfalseを返します
-	// メモリを使い切ったら先頭アドレスに戻って追加して下さいq->tail + 1 == q->memory_end
-		if (q == NULL || q->tail + 1 == q->memory_end)return false;
+	// メモリを使い切ったら先頭アドレスに戻って追加して下さいq->tail+1==q->memory_end
+	if (q == NULL || q->tail + 1 == q->memory_end)return false;
 
-		*q->tail = val;
-		q->tail++;
-	return false;
+	*q->tail = val;
+	q->tail++;
+	return true;
 }
 
 
@@ -52,10 +52,11 @@ bool enqueue_array(QUEUE* q, int* addr, int num)
 	// 上手くいかない場合にはfalseを返します
 	// メモリを使い切ったら先頭アドレスに戻って追加して下さい
 	if (num < 1 || !q || !q->head || !addr || countQueueableElements(q) - num < 0)return false;
+	
 	for(int index=0; index<num; index++)
 		if (!enqueue(q, addr[index]))return false;
 
-	return false;
+	return true;
 }
 
 // キューから一つの要素を取り出す(不具合時は0を返す)
