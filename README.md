@@ -6,7 +6,7 @@
 ただし、中身が実装されていません。
 実装して、ユニットテストが通るようにしてください。
 
-[![MS Build and Test](https://github.com/tpu-game-2022/comp2_10_queue/actions/workflows/ms_test.yml/badge.svg)](https://github.com/tpu-game-2022/comp2_10_queue/actions/workflows/ms_test.yml)
+[![MS Build and Test](https://github.com/shion-018/comp2_10_queue/actions/workflows/ms_test.yml/badge.svg)](https://github.com/shion-018/comp2_10_queue/actions/workflows/ms_test.yml)
 
 （このファイルの上の行の[tpu-game-2022]の部分(2か所)を自分のアカウント名に修正してください）
 
